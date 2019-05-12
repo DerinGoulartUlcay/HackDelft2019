@@ -1,22 +1,36 @@
 """
-Computer Science Minor Project
-Group 11
-2018-2019
+DeDucktible
+Group 6
+HackDelft 2019
 """
-"""
-TODO:
-    MUSTS:
-    Fix web_scraping
-    Fix rating
-    Add "RECOMMEND" button
+'''
+Find the date, organization, total amount and currency from the ocr'ed text.
 
-    WANTS:
-    Caching
-    View of divs in index
-"""
+Hackathon 2019
+Group 6
+Derin Goulart Ulcay
+'''
+import re
+
+import os
+os.system('tesseract receipt.jpg receipt')
+
+def read_receipt(my_file):
+    with open(my_file, 'r') as f:
+        lines = f.readlines()
+    return lines
+#REGEX Patterns To Be Searched
+date_pattern = re.compile(r"^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$")
+
+total_amount_pattern = re.compile("")
+
+currency_symbol_pattern = re.compile(u"[$¢£¤¥֏؋৲৳৻૱௹฿៛\u20a0-\u20bd\ua838\ufdfc\ufe69\uff04\uffe0\uffe1\uffe5\uffe6]")
+currency_abbrev_pattern = re.compile(u"\b[A-Z]{3}\b")
+
+#Find The Organization
 
 from flask import Flask, render_template, request, redirect, url_for
-import Model.parser as parser
+import re
 # import Controller.web_scraping as ws
 
 
@@ -25,57 +39,22 @@ app = Flask(__name__, template_folder="../View/templates", static_folder="../Vie
 # Make the WSGI interface available at the top level so wfastcgi can get it.
 wsgi_app = app.wsgi_app
 
+receipt = read_receipt("receipt.txt")
+
+
+
+file_name = "TU Delft - 2019-05-12.jpg"
+price  = "1.80"
+# currency = currency_abbrev_pattern.findall(receipt)
+data = {'filename':file_name, 'breakfast': price}
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
     """Renders a sample page."""
     if request.method == 'POST':
-        for i in request.form.keys():
-            if i == 'tag':
-                query = request.form['tag']
-                matched_movies, matched_movies_ids = model_object.search(query)
-
-                max_size = 5
-                if len(matched_movies) - 1 > max_size:
-                    top_matched_movies = matched_movies[:max_size]
-                    top_matched_movies_ids = matched_movies_ids[:max_size]
-                else:
-                    top_matched_movies = matched_movies
-                    top_matched_movies_ids = matched_movies_ids
-
-
-                movie_images = []
-                for movie in top_matched_movies:
-                    movie_images.append(ws.get_movie_data(movie))
-                result = zip(top_matched_movies, movie_images, top_matched_movies_ids)
-
-                rated_movies = update_rated_movies()
-                recommended_movies = get_recommended_movies()
-
-                return render_template("index.html", rated_movies=rated_movies, results=result, recommendations = recommended_movies)
-
-            elif 'rating-' in i:
-                rating = int(i[7])
-                rated_movie_id = i[9:]
-                model_object.add_rating(USER_ID, rated_movie_id, rating)
-                rated_movies = update_rated_movies()
-                recommended_movies = get_recommended_movies()
-                return render_template("index.html", rated_movies = rated_movies, recommendations = recommended_movies)
-
-            elif i == "get_recommended_movies":
-                update_recommendations()
-                recommended_movies = get_recommended_movies()
-                rated_movies = update_rated_movies()
-                return render_template("index.html", rated_movies = rated_movies, recommendations = recommended_movies)
-
+        pass
     else:
-        rated_movies = update_rated_movies()
-        return render_template("index.html", rated_movies = rated_movies)
-
-def give_rating():
-    rating = request.form['']
-    movie_id = request.form['first_name']
-    model_object.add_rating(USER_ID, movie_id, rating)
+        return render_template("index.html", data = data)
 
 
 
