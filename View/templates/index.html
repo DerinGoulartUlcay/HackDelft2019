@@ -1,0 +1,301 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeDucktible</title>
+    <link href="{{ url_for('static', filename='css/app.css') }}" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+      
+    <div class="header">
+    <div data-sticky-container>
+      <div class="title-bar" data-sticky data-options="marginTop:0;">
+        <div class="title-bar-left">
+            <img src="ducklogo.png" alt="Ducklogo" width="3%">
+        </div>
+        <div class="title-bar-middle">
+            <h6>DeDucktible</h6>
+        </div>
+        <div class="title-bar-right">
+            <h5>      </h5>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+<div class="hero-section">
+    <div class="grid-container">
+        <div class="small-section">
+      <div class="grid-x grid-padding-x">
+        <div class="whitetext">. </div>
+      </div>
+      <div class="grid-x grid-padding-x">
+        <div class="large-3 cell"></div>
+        <div class="large-2 cell">
+            <img src="ducklogo.png" alt="Ducklogo">
+        </div>
+        <div class="large-4 cell">
+            <img src="sogeti.png" alt="Sogeti logo">
+      </div>
+        <div class="large-12 cell">
+          <h1>DeDucktible</h1>
+          <h3>Sogeti Reimbursement Service</h3>
+            <p>Welcome to DeDucktible the reimbursement service of sogeti. Use this website to
+            handle all reimbursements. Please fill in all requiered fields and send it
+            afterwards.</p>
+            <p>We strongly recommend using the mobile app to avoid errors in the
+            form and also speed up the process.</p>
+          <hr>
+        </div>
+      </div>
+
+      <!-- My code -->
+
+
+      <!-- display company worker ID -->
+      <div class="grid-x grid-padding-x">
+        <div class="large-12 cell">
+            <h2>General Information</h2>
+            <div class="grid-x grid-padding-x">
+                <div class="large-2 cell">
+                  <label>Employee number</label>
+                  <div class="primary callout">
+                    <p>271479342</p>
+                  </div>
+                </div>
+                <div class="large-2 cell">
+                  <label>Declaration number</label>
+                  <div class="primary callout">
+                    <p>334404</p>
+                  </div>
+                </div>
+                <div class="large-2 cell">
+                  <label>Submitted</label>
+                  <div class="primary callout">
+                    <p>12/05/2019</p>
+                  </div>
+                </div>
+                <div class="large-3 cell">
+                  <label>Bank account</label>
+                  <div class="primary callout">
+                    <p>NL91 ABNA 0417 1643 00</p>
+                  </div>
+                </div>
+                <div class="large-3 cell">
+                  <label>Authorisator</label>
+                  <div class="primary callout">
+                    <p>No, automatic authorisation</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="grid-x grid-padding-x">
+        <div class="large-3 cell">
+            <label>Reference number</label>
+            <input type="number" placeholder="Put in reference number" />
+        </div>
+      </div>
+      <hr>
+
+      <!-- display the form -->
+      <div class="grid-x grid-padding-x">
+        <div class="large-12 medium-4 cell">
+            <h2>Reimbursement form</h2>
+                <div class="grid-x grid-padding-x">
+                <div class="large-5 cell"> 
+                  <label>Select type of reimbursement</label>
+                    <select id="reimSelect">
+                        <option value="Hotelcosts">Hotel costs</option>
+                        <option value="Parkingcosts">Parking costs</option>
+                        <option value="Gifts to externs">Gifts to externs</option>
+                        <option value="Gifts to interns">Gifts to interns</option>
+                        <option value="ESTA">ESTA</option>
+                    </select>
+                  </div>
+                </div>
+
+              <form>
+                <hr>
+                <h5>General</h5>
+                <hr>
+                <div class="grid-x grid-padding-x">
+                    <div class="large-3 cell"> 
+                      <label>Abroad?</label>
+                        <select>
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                        </select>
+                    </div>
+                    <div class="large-3 cell"> 
+                      <label>Charge customer?</label>
+                        <select>
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid-x grid-padding-x">
+                  <div class="large-9 cell">
+                    <label>Motivation</label>
+                    <textarea placeholder="Add comment if necessary"></textarea>
+                  </div>
+                </div>
+                <hr>
+                <div id="Hotelcosts" class="specificForm">
+                    <h3>Hotel costs reimbursement</h3>
+                    <hr>
+                    <h5>Dates</h5>
+                    <hr>
+                    <div class="grid-x grid-padding-x">
+                        <div class="large-3 cell"> 
+                                <label>Start date</label>
+                                <input type="date" placeholder="Check-in date" />
+                        </div>
+                        <div class="large-3 cell"> 
+                                <label>End date</label>
+                                <input type="date" placeholder="Check-out date" />
+                        </div>
+                    </div>
+                    <hr>
+                    <h5>Details</h5>
+                    <hr>
+                    <div class="grid-x grid-padding-x">
+                        <div class="large-3 cell"> 
+                                <label>Invoice date</label>
+                                <input type="date" placeholder="Invoice date" />
+                        </div>
+                    </div>
+                    <div class="grid-x grid-padding-x">
+                        <div class="large-2 medium-2 cell"> 
+                            <label>Breakfast costs</label>
+                                <div class="input-group">
+                                    <input type="number" name="hotel" placeholder="Breakfast price" class="input-group-field" oninput="totalFcn()"/>
+                                    <span class="input-group-label">€</span>
+                                </div>
+                        </div>
+                        <div class="large-2 medium-2 cell"> 
+                            <label>Diner costs</label>
+                                <div class="input-group">
+                                    <input type="number" name="hotel" placeholder="Diner price" class="input-group-field" oninput="totalFcn()"/>
+                                    <span class="input-group-label">€</span>
+                                </div>
+                        </div>
+                        <div class="large-2 medium-2 cell"> 
+                            <label>Parking costs</label>
+                                <div class="input-group">
+                                    <input type="number" name="hotel" placeholder="Diner price" class="input-group-field" oninput="totalFcn()"/>
+                                    <span class="input-group-label">€</span>
+                                </div>
+                        </div>
+                        <div class="large-2 medium-2 cell"> 
+                            <label>Wifi costs</label>
+                                <div class="input-group">
+                                    <input type="number" name="hotel" placeholder="Wifi costs" class="input-group-field" oninput="totalFcn()"/>
+                                    <span class="input-group-label">€</span>
+                                </div>
+                        </div>
+                        <div class="large-2 medium-2 cell"> 
+                            <label>Other costs</label>
+                                <div class="input-group">
+                                    <input type="number" name="hotel" placeholder="Other costs" class="input-group-field" oninput="totalFcn()"/>
+                                    <span class="input-group-label">€</span>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="grid-x grid-padding-x">
+                      <div class="large-10 cell">
+                        <label>Comment</label>
+                        <textarea placeholder="Add comment if necessary"></textarea>
+                      </div>
+                    </div>
+                    <hr>
+                    <h5>Attachments</h5>
+                    <hr>
+                </div>
+                    <div id="Parkingcosts" class="specificForm">
+                    <h3>Parking costs reimbursement</h3>
+                        <hr>
+                        <h5>General</h5>
+                        <hr>
+                        <div class="grid-x grid-padding-x">
+                            <div class="large-3 cell"> 
+                            <label>Month</label>
+                            <select>
+                                <option value="January">January</option>
+                                <option value="February">February</option>
+                                <option value="March">March</option>
+                                <option value="April">April</option>
+                                <option value="Mai">Mai</option>
+                                <option value="June">June</option>
+                                <option value="July">July</option>
+                                <option value="August">August</option>
+                                <option value="September">September</option>
+                                <option value="October">October</option>
+                                <option value="November">November</option>
+                                <option value="December">December</option>
+                            </select>
+                            </div>
+                            <div class="large-3 cell"> 
+                            <label>Year</label>
+                            <select>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                            </select>
+                            </div>
+                        <div class="large-3 medium-3 cell"> 
+                            <label>Parking costs</label>
+                                <div class="input-group">
+                                    <input type="number" name="parking" placeholder="Parking costs" class="input-group-field" oninput="totalFcn2()"/>
+                                    <span class="input-group-label">€</span>
+                                </div>
+                        </div>
+                        </div>
+                        <div class="grid-x grid-padding-x">
+                          <div class="large-9 cell">
+                            <label>Comment</label>
+                            <textarea placeholder="Add comment if necessary"></textarea>
+                          </div>
+                        </div>
+                        <hr>
+                        <h5>Attachments</h5>
+                        <hr>
+                        </div>
+              </form>
+              <div class="grid-x grid-padding-x">
+                  <div class="large-10 cell">
+                        <p><a href="#" class="button">Add from file</a>
+                        <a href="#" class="button">Add from scan</a><br/></p>
+                        <hr>
+                  </div>
+                  <div class="large-12 cell">
+                        <div class="grid-x grid-padding-x">
+                            <div class="large-2 cell">
+                              <label>Total amount</label>
+                              <div class="primary callout">
+                                <output id="total">0</output> €
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <hr>
+                  <div class="large-10 cell">
+                      <p><a href="#" class="button">Send form</a><br/></p>
+                  </div>
+              </div>
+                
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="{{ url_for('static', filename='js/foundation.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/what-input.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+</html>
