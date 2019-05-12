@@ -13,7 +13,7 @@ Derin Goulart Ulcay
 import re
 
 import os
-os.system('tesseract receipt.jpg receipt')
+os.system('tesseract "TU Delft - 2019-05-12.jpeg" receipt dut')
 
 def read_receipt(my_file):
     with open(my_file, 'r') as f:
@@ -22,7 +22,7 @@ def read_receipt(my_file):
 #REGEX Patterns To Be Searched
 date_pattern = re.compile(r"^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$")
 
-total_amount_pattern = re.compile("")
+total_amount_pattern = re.compile(r"\d*(\.|,)\d*")
 
 currency_symbol_pattern = re.compile(u"[$¢£¤¥֏؋৲৳৻૱௹฿៛\u20a0-\u20bd\ua838\ufdfc\ufe69\uff04\uffe0\uffe1\uffe5\uffe6]")
 currency_abbrev_pattern = re.compile(u"\b[A-Z]{3}\b")
@@ -43,9 +43,14 @@ receipt = read_receipt("receipt.txt")
 
 
 
-file_name = "TU Delft - 2019-05-12.jpg"
-price  = "1.80"
-# currency = currency_abbrev_pattern.findall(receipt)
+file_name = "TU Delft - 2019-05-12.jpeg"
+cost = "unknown"
+for line in receipt:
+    print(line)
+    if "EUR" in line:
+        currency = currency_abbrev_pattern.findall(line)
+        price = total_amount_pattern.findall(line)
+        print(currency, cost)
 data = {'filename':file_name, 'breakfast': price}
 
 @app.route('/', methods=['GET', 'POST'])
