@@ -13,7 +13,7 @@
     <div data-sticky-container>
       <div class="title-bar" data-sticky data-options="marginTop:0;">
         <div class="title-bar-left">
-            <img src="ducklogo.png" alt="Ducklogo" width="3%">
+            <img src="/static/img/ducklogo.png" alt="Ducklogo" width="3%">
         </div>
         <div class="title-bar-middle">
             <h6>DeDucktible</h6>
@@ -35,10 +35,10 @@
       <div class="grid-x grid-padding-x">
         <div class="large-3 cell"></div>
         <div class="large-2 cell">
-            <img src="ducklogo.png" alt="Ducklogo">
+            <img src="/static/img/ducklogo.png" alt="Ducklogo">
         </div>
         <div class="large-4 cell">
-            <img src="sogeti.png" alt="Sogeti logo">
+            <img src="/static/img/sogeti.png" alt="Sogeti logo">
       </div>
         <div class="large-12 cell">
           <h1>DeDucktible</h1>
@@ -294,8 +294,8 @@
 </div>
 
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
     <script src="{{ url_for('static', filename='js/foundation.js') }}"></script>
     <script src="{{ url_for('static', filename='js/what-input.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
   </body>
 </html>
