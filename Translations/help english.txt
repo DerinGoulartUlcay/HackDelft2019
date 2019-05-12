@@ -1,0 +1,26 @@
+my Declaration - Help WELCOME to the "HELP" page of my Declaration.
+This may be your first visit to myDeclaration. In any case, first read the user manual and this HELP part of my Declaration carefully before you actually start using the application and submit your declaration (s).
+This HELP page is of course always available, so that you - if you have questions later - can always take a look here.
+In this system, the processes are automated as much as possible and part of the processing is handled by our colleagues in India. Therefore fill in the text fields in English. After the claim form has been completely filled in, you mail the whole (the printed and signed version (with receipts / supporting documents)) to the address that is pre-printed on the claim form. The latter unfortunately cannot be automated, because the tax rules stipulate that we as a company must always be able to submit the signed application + receipt. Because we save scanned versions, you will have to save the originals yourself during the tax term of 7 years. We have also made myDeclaratie in such a way that everything runs through this application as much as possible.
+When will the claim be paid?
+A fully and accurately completed declaration will go through the process faster. Declarations are paid within 2 weeks after receipt of the declaration in the mailbox centraleontvangst@sogeti.com, excluding the declarations that run via the monthly salary run: Call allowance, Teacher allowance, Additional Mobility allowance, Communication allowance, Public transport Annual ticket, Public transport Commuting and Business Kilometers (flex). Payment of this takes place with the next payment of the salary.
+A condition for the quick payment is that the declaration is complete and correct. You therefore have influence on the duration of your declaration by adding a good motivation and a clear description (detailed rules) to the declaration (in English).
+How does it work?
+If you are immediately in the home screen, first make a choice between all the different (declaration) options. We have listed the most common declaration types in the list. If you really cannot find your post in the list, use the "other" option. Then click on the button with the text "Continue" and you will automatically see the first screen of a new declaration.
+From now on you will end up in a series of screens. Each screen has one or more buttons. If you place your cursor on a button, a help text appears that explains what happens when you click on that button. Useful to know that the shape and color of the different fields / buttons all have meaning:
+A. Entry fields with a thick black border are mandatory fields. If you move your mouse over such a field, you will see in the status line what you need to enter: numbers, date or text.
+obligated
+B
+.
+Input fields with a thin black line are non-mandatory fields. So it is up to you to provide it with text or numbers where necessary or desirable. In some cases, one of two non-mandatory fields is required, followed by a warning if both fields are filled or both fields remain empty.
+At a number of screens you will find a button at the bottom with the text "save and check". When you have done that, some fields will change to a gray field with text and / or values. This data is automatically retrieved from our systems or calculated. You cannot add or change anything here yourself. They are only filled after using the "save and check" button. These fields will then look gray.
+123.75
+All buttons that take you to the next screen or that result in an action (eg printing, saving, saving etc) are colored yellow.
+The entire declaration process (from filling in to getting paid) has a number of steps. We will list these clearly below:
+1. Select the type of declaration and enter basic information. 2. Ask your (unit) manager for permission to submit the declaration. In a number of cases you have
+automatic permission. If that is not the case, your (unit) manager will automatically receive an email. Once the permission has been given, you will receive an email and you can continue in the process.
+Entering the so-called header lines of your declaration (in English). 4. Entering the detailed lines of your declaration in English).
+In some cases the declaration is sent to your (unit) manager for approval. 6. Your (unit) manager has 3 options:
+a. Your declaration is approved; b. Your declaration will be sent back to you to be completed (you will also read what else is there
+is missing);
+C. the declaration is rejected (you will also be told why that happened). 7. Your declaration has been approved. You print, sign and scan
